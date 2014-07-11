@@ -10,11 +10,11 @@ class Monitor(object):
 
     def get_memory_usage(self):
         result = os.popen('free -m').read().split('\n')[1]
-        return result.split()[1] + 'M/' + result.split()[2] + 'M'
+        return result.split()[2] + 'M/' + result.split()[1] + 'M'
 
     def get_disk_usage(self):
         result = os.popen('df -h').read().split('\n')[1]
-        return result.split()[1] + '/' + result.split()[2]  
+        return result.split()[2] + '/' + result.split()[1]  
 
 if __name__ == '__main__':
     monitor = Monitor()
