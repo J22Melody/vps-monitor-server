@@ -35,9 +35,10 @@ class Monitor(object):
                 'user_agent': re.findall(r'\s\"[^\"]*\"$', line)[0][2:-1] 
             })
         total_request = len(request_list)
-        local = locals()
         return { 
-            key: local[key] for key in ['log_size','total_request','request_list'] 
+            'log_size': log_size,
+            'total_request': total_request,
+            'request_list': request_list
         }
 
 if __name__ == '__main__':
