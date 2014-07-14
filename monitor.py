@@ -37,8 +37,7 @@ class Monitor(object):
         total_request = len(request_list)
         local = locals()
         return { 
-            key: local[key] for key in 
-            ['log_size','total_request','request_list'] 
+            key: local[key] for key in ['log_size','total_request','request_list'] 
         }
 
 if __name__ == '__main__':
